@@ -1,35 +1,24 @@
-# Hugging Face Model Installer & Runner
+# 🤖 HuggingFace Model Installer (HFMI)
 
-A simple Python script to download any Hugging Face model and optionally generate text locally.
+A lightweight CLI tool to **download, organize, and test Hugging Face models** locally.
 
-## Requirements
-- Python 3.10+  
-- Pip
+## 🧭 Features
+- Easy one-command model installation.
+- Automatic folder management (`AI_models/`).
+- Optional interactive text generation.
+- Metadata logging for every model.
 
-## Installation
-
-1. Clone the repo:
+## 🚀 Usage
 ```bash
-git clone https://github.com/yourusername/hugging_face_model_installer.git
-cd hugging_face_model_installer
-``` 
-2. Install dependencies: 
-```bash 
-pip install -r requirements.txt
+python -m hfmi --model meta-llama/Llama-3-8b --generate
 ```
-Usage: 
+Or, run without flags for interactive prompts: 
 ```bash 
-python run_model.py
+python -m hfmi
 ```
-   1.  Paste the Hugging Face model ID (e.g., gpt2).
+All downloaded models are stored under AI_models/<model_id>/ .
 
-   2.  Wait for download & loading.
-
-   3.  Optional: generate text interactively.
-
-Notes: 
-    Models are stored in AI_models/<model_name>/.
-
-    Works with CPU or GPU automatically.
-
-    Works with any Transformers model.
+##Installation 
+```bash 
+bash install.sh 
+```
